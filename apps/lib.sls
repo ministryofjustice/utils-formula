@@ -65,10 +65,10 @@ ssh_github_{{ appslug }}:
 {% endmacro %}
 
 
-{########################################## app_clone ######################
+{########################################## app_install_deploy_key ######################
   install ssh priv key from pillar.deploy.ssh.key_type
 #}
-{% macro app_deploy_key(appslug) %}
+{% macro app_install_deploy_key(appslug) %}
 private_key_{{ appslug }}:
   file:
     - managed
