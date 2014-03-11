@@ -94,7 +94,7 @@ private_key_{{ appslug }}:
   git:
     - latest
     - name: {{ gitrepo }}
-    - rev: master
+    - rev: {{ pillar['apps'][appslug]['git_rev']}}
     - user: {{ appslug }}
     - force: True
     - force_checkout: True
