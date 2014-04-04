@@ -24,7 +24,7 @@ ssh_github_{{ appslug }}:
     - present
     - name: github.com
     - user: {{ appslug }}
-    - fingerprint: {{ pillar.github_ssh_fingerprint }}
+    - fingerprint: {{ salt['pillar.get']('github_ssh_fingerprint', '16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48') }}
     - require:
       - user: {{ appslug }}
       - file: /srv/{{ appslug }}/.ssh
