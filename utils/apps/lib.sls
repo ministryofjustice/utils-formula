@@ -51,7 +51,7 @@ ssh_github_{{ appslug }}:
 {{directory}}:
   file:
     - directory
-    - dir_mode: 751
+    - dir_mode: 755
     - makedirs: True
     - user: {{appslug}}
     - group: {{appslug}}
